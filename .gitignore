@@ -4,3 +4,7 @@
 # Ignore build directory
 /build
 
+# Ignore Mac .DS_store
+.DS_Store
+resources/.DS_Store
+
