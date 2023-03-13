@@ -41,15 +41,19 @@
 }
 
 #statIcon {
-  x: "44%+7";
+  x: "43%+7";
   y: "68%+4";
-  width: "28";
+  width: "32";
   height: "28";
-  fill: "#de5959";
+  fill: "white";
 }
 
 #batt_bars {
   transform: translate(23%,0);
 }
 
+/* .application-fill           { fill: fb-cyan; } */
+.app-gradient-background    { fill: fb-cyan; } /* 8ecadc, 66db60, fb-cyan, */
+/* .foreground-fill            { fill: fb-white; } */
+/* .background-fill            { fill: fb-black; } */
 

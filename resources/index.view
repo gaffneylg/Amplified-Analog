@@ -1,4 +1,6 @@
 <svg class="background">
+<use href="#app-gradient-background" class="app-gradient-background application-fill" apply-style="at-use">
+
   <symbol id="min_hand" pointer-events="visible" >
     <!-- <rect x="$-4" y="-110" width="8" height="110" fill="#e0e0e0" /> -->
     <line x1="0" y1="-16%" x2="0" y2="-46%+46" stroke-width="9" fill="black" />
@@ -205,9 +207,8 @@
     <text id="myweek" x="63%" fill="#bebebe" font-size="24"></text>
     <text id="mydate" x="80%" fill="#bebebe" font-size="24"></text>
     
-    <!-- <image id="staticon">"S"</image> -->
     <svg id="statIconSvg">
-      <image id="statIcon" href="ico_steps.png"/> 
+      <image id="statIcon" href="icon_steps.png"/> 
     </svg>
     <text id="mystats" fill="#e8eb2e" text-length="32"></text>
 
@@ -220,8 +221,8 @@
       <!-- <image x="10" y="10" width="23" height="23" href="ico_cal.png" fill="inherit" /> -->
 
 
-      <!-- <image id="statIcon" href="ico_steps.png"/> -->
-      <!-- <image id="statIcon" href="ico_batt.png"/> -->
+      <!-- <image id="statIcon" href="steps_icon.png"/> -->
+      <!-- <image id="statIcon" href="batt_icon.png"/> -->
 
 
       <!-- <image x="100%-32" y="100%-32" width="23" height="23" href="ico_dist.png" fill="inherit" /> -->
@@ -248,4 +249,5 @@
     <rect id="btm_half" width="90%" height="45%" x="5%" y="50%" fill="#ffffff" opacity="0" pointer-events="visible" />
   </svg>  
 
+  </use>
 </svg>
