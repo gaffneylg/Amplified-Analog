@@ -1,253 +1,172 @@
 <svg class="background">
-<use href="#app-gradient-background" class="app-gradient-background application-fill" apply-style="at-use">
+  <use href="#app-gradient-background" class="app-gradient-background application-fill" apply-style="at-use">
 
-  <symbol id="min_hand" pointer-events="visible" >
-    <!-- <rect x="$-4" y="-110" width="8" height="110" fill="#e0e0e0" /> -->
-    <line x1="0" y1="-16%" x2="0" y2="-46%+46" stroke-width="9" fill="black" />
+    <symbol id="min_hand" pointer-events="visible" >
+      <line x1="0" y1="-16%" x2="0" y2="-46%+46" stroke-width="9" fill="black" />
       <line x1="0" y1="-21%" x2="0" y2="-6%-6" stroke-width="9" fill="black" />
-
       <line x1="0" y1="-2" x2="0" y2="-20%" stroke-width="1" fill="inherit" />
-
       <line x1="0" y1="-16%" x2="0" y2="-46%+46" stroke-width="7" fill="inherit" />
       <line x1="0" y1="-21%" x2="0" y2="-6%-6" stroke-width="7" fill="inherit" />
-</symbol>
-  <symbol id="hour_hand" pointer-events="visible">
-    <!-- <rect x="$-6" y="-75" width="12" height="75" fill="#ffffff" /> -->
-    <line x1="0" y1="-21%" x2="0" y2="-22%" stroke-width="13" fill="black" />
+    </symbol>
+    <symbol id="hour_hand" pointer-events="visible">
+      <line x1="0" y1="-21%" x2="0" y2="-22%" stroke-width="13" fill="black" />
       <line x1="0" y1="-25%" x2="0" y2="-6%-6" stroke-width="13" fill="black" />
-
       <line x1="0" y1="-3" x2="0" y2="-20%" stroke-width="1" fill="inherit" />
-
       <line x1="0" y1="-21%" x2="0" y2="-22%" stroke-width="11" fill="inherit" />
       <line x1="0" y1="-25%" x2="0" y2="-6%-6" stroke-width="11" fill="inherit" />
-
       <line x1="0" y1="-14%" x2="0" y2="-18%" stroke-width="7" fill="#5a5a5a" />
       <line x1="0" y1="-18%" x2="0" y2="-10%" stroke-width="7" fill="#5a5a5a" />
-  </symbol>
-  <!-- <symbol id="min_hand" pointer-events="visible">
-      <line x1="0" y1="-21%" x2="0" y2="-50%+6" stroke-width="10" fill="black" />
-      <line x1="0" y1="-25%" x2="0" y2="-6%-6" stroke-width="10" fill="black" />
-
-      <line x1="0" y1="-3" x2="0" y2="-20%" stroke-width="1" fill="inherit" />
-
-      <line x1="0" y1="-21%" x2="0" y2="-50%+6" stroke-width="8" fill="inherit" />
-      <line x1="0" y1="-25%" x2="0" y2="-6%-6" stroke-width="8" fill="inherit" />
     </symbol>
-  <symbol id="hour_hand" pointer-events="visible">
-      <line x1="0" y1="-21%" x2="0" y2="-29%" stroke-width="14" fill="black" />
-      <line x1="0" y1="-25%" x2="0" y2="-6%-6" stroke-width="14" fill="black" />
-
-      <line x1="0" y1="-3" x2="0" y2="-20%" stroke-width="1" fill="inherit" />
-
-      <line x1="0" y1="-21%" x2="0" y2="-29%" stroke-width="12" fill="inherit" />
-      <line x1="0" y1="-25%" x2="0" y2="-6%-6" stroke-width="12" fill="inherit" />
-
-      <line x1="0" y1="-14%" x2="0" y2="-22%" stroke-width="8" fill="black" />
-      <line x1="0" y1="-18%" x2="0" y2="-10%" stroke-width="8" fill="black" />
-    </symbol> -->
-  <symbol id="sec_hand" pointer-events="visible">
-    <rect x="$-2" y="-130" width="3" height="120" fill="#ff0000" />
-  </symbol>
-  <circle cx="50%" cy="50%" r="10" fill="#444444" />
-
-
-  <defs>
-    <symbol id="hour_marker_one">
-      <g id="container">
-        <line x1="0" y1="-47%" x2="0" y2="-50%-1" stroke-width="4" fill="inherit" />
-        <line x1="0" y1="-47%" x2="0" y2="-45%-2" stroke-width="4" fill="inherit" />
-      </g>
+    <symbol id="sec_hand" pointer-events="visible">
+      <rect x="$-2" y="-130" width="3" height="120" fill="#ff0000" />
     </symbol>
+    <circle cx="50%" cy="50%" r="10" fill="#444444" />
 
-    <symbol id="hour_marker_quarter">
-      <g id="container">
-        <!-- <use href="#hour_marker_one" fill="inherit" /> -->
-        <use href="#hour_marker_one" fill="inherit">
-          <set href="container" attributeName="transform" to="rotate(30)" />
+    <defs>
+      <symbol id="hour_marker_one">
+        <g id="container">
+          <line x1="0" y1="-47%" x2="0" y2="-50%-1" stroke-width="4" fill="inherit" />
+          <line x1="0" y1="-47%" x2="0" y2="-45%-2" stroke-width="4" fill="inherit" />
+        </g>
+      </symbol>
+
+      <symbol id="hour_marker_quarter">
+        <g id="container">
+          <use href="#hour_marker_one" fill="inherit">
+            <set href="container" attributeName="transform" to="rotate(30)" />
+          </use>
+          <use href="#hour_marker_one" fill="inherit">
+            <set href="container" attributeName="transform" to="rotate(60)" />
+          </use>
+        </g>
+      </symbol>
+      
+      <symbol id="hour_marker">
+        <!-- Roman numerals  -->
+        <text id="twelve" x="-5%" y="-43%" fill="inherit" font-size="32" fill="#d1c77c">XII</text>
+        <!-- Arabic numbers -->
+        <!-- <text id="twelve" x="-4%" y="-43%" fill="inherit" font-size="32" fill="#d1c77c">12</text> -->
+        <use href="#hour_marker_quarter" fill="inherit" />
+
+        <!-- Roman numerals  -->
+        <text id="three" x="44%-2" y="4%-2" fill="inherit" font-size="32" fill="#d1c77c">III</text>
+        <!-- Arabic numbers -->
+        <!-- <text id="three" x="45%-1" y="4%-2" fill="inherit" font-size="32" fill="#d1c77c">3</text> -->
+
+        <use href="#hour_marker_quarter" fill="inherit">
+          <set href="container" attributeName="transform" to="rotate(90)" />
         </use>
-        <use href="#hour_marker_one" fill="inherit">
-          <set href="container" attributeName="transform" to="rotate(60)" />
+        <!-- Roman numerals  -->
+        <text id="six" x="-5%+1" y="49%+2" fill="inherit" font-size="32" fill="#d1c77c">VI</text>
+        <!-- Arabic numbers -->
+        <!-- <text id="six" x="-3%+1" y="49%" fill="inherit" font-size="32" fill="#d1c77c">6</text> -->
+
+        <use href="#hour_marker_quarter" fill="inherit">
+          <set href="container" attributeName="transform" to="rotate(180)" />
         </use>
-      </g>
-    </symbol>
+        <!-- Roman numerals  -->
+        <text id="nine" x="-51%+4" y="3%" fill="inherit" font-size="32" fill="#d1c77c">IX</text>
+        <!-- Arabic numbers -->
+        <!-- <text id="nine" x="-51%+4" y="3%" fill="inherit" font-size="32" fill="#d1c77c">9</text> -->
+
+        <use href="#hour_marker_quarter" fill="inherit">
+          <set href="container" attributeName="transform" to="rotate(270)" />
+        </use>
+      </symbol>
+
+      <symbol id="min_marker_one">
+        <g id="container">
+          <line x1="0" y1="-49%" x2="0" y2="-50%+1" stroke-width="1" fill="inherit" />
+          <line x1="0" y1="-49%" x2="0" y2="-48%+1" stroke-width="1" fill="inherit" />
+        </g>
+      </symbol>
+
+      <symbol id="min_marker_penta">
+        <g id="container">
+          <use href="#min_marker_one" fill="inherit">
+            <set href="container" attributeName="transform" to="rotate(6)" />
+          </use>
+          <use href="#min_marker_one" fill="inherit">
+            <set href="container" attributeName="transform" to="rotate(12)" />
+          </use>
+          <use href="#min_marker_one" fill="inherit">
+            <set href="container" attributeName="transform" to="rotate(18)" />
+          </use>
+          <use href="#min_marker_one" fill="inherit">
+            <set href="container" attributeName="transform" to="rotate(24)" />
+          </use>
+        </g>
+      </symbol>
+
+      <symbol id="min_marker_quarter">
+        <g id="container">
+          <use href="#min_marker_penta" fill="inherit" />
+          <use href="#min_marker_penta" fill="inherit">
+            <set href="container" attributeName="transform" to="rotate(30)" />
+          </use>
+          <use href="#min_marker_penta" fill="inherit">
+            <set href="container" attributeName="transform" to="rotate(60)" />
+          </use>
+        </g>
+      </symbol>
     
-    <symbol id="hour_marker">
-      <!-- Roman numerals  -->
-      <text id="twelve" x="-5%" y="-43%" fill="inherit" font-size="32" fill="#d1c77c">XII</text>
-      <!-- Arabic numbers -->
-      <!-- <text id="twelve" x="-4%" y="-43%" fill="inherit" font-size="32" fill="#d1c77c">12</text> -->
-      <use href="#hour_marker_quarter" fill="inherit" />
-
-      <!-- Roman numerals  -->
-      <text id="three" x="44%-2" y="4%-2" fill="inherit" font-size="32" fill="#d1c77c">III</text>
-      <!-- Arabic numbers -->
-      <!-- <text id="three" x="45%-1" y="4%-2" fill="inherit" font-size="32" fill="#d1c77c">3</text> -->
-
-      <use href="#hour_marker_quarter" fill="inherit">
-        <set href="container" attributeName="transform" to="rotate(90)" />
-      </use>
-      <!-- Roman numerals  -->
-      <text id="six" x="-5%+1" y="49%+2" fill="inherit" font-size="32" fill="#d1c77c">VI</text>
-      <!-- Arabic numbers -->
-      <!-- <text id="six" x="-3%+1" y="49%" fill="inherit" font-size="32" fill="#d1c77c">6</text> -->
-
-      <use href="#hour_marker_quarter" fill="inherit">
-        <set href="container" attributeName="transform" to="rotate(180)" />
-      </use>
-      <!-- Roman numerals  -->
-      <text id="nine" x="-51%+4" y="3%" fill="inherit" font-size="32" fill="#d1c77c">IX</text>
-      <!-- Arabic numbers -->
-      <!-- <text id="nine" x="-51%+4" y="3%" fill="inherit" font-size="32" fill="#d1c77c">9</text> -->
-
-      <use href="#hour_marker_quarter" fill="inherit">
-        <set href="container" attributeName="transform" to="rotate(270)" />
-      </use>
-    </symbol>
-
-    <symbol id="min_marker_one">
-      <g id="container">
-        <line x1="0" y1="-49%" x2="0" y2="-50%+1" stroke-width="1" fill="inherit" />
-        <line x1="0" y1="-49%" x2="0" y2="-48%+1" stroke-width="1" fill="inherit" />
-      </g>
-    </symbol>
-
-    <symbol id="min_marker_penta">
-      <g id="container">
-        <use href="#min_marker_one" fill="inherit">
-          <set href="container" attributeName="transform" to="rotate(6)" />
+      <symbol id="min_marker">
+        <use href="#min_marker_quarter" fill="inherit" />
+        <use href="#min_marker_quarter" fill="inherit">
+          <set href="container" attributeName="transform" to="rotate(90)" />
         </use>
-        <use href="#min_marker_one" fill="inherit">
-          <set href="container" attributeName="transform" to="rotate(12)" />
+        <use href="#min_marker_quarter" fill="inherit">
+          <set href="container" attributeName="transform" to="rotate(180)" />
         </use>
-        <use href="#min_marker_one" fill="inherit">
-          <set href="container" attributeName="transform" to="rotate(18)" />
+        <use href="#min_marker_quarter" fill="inherit">
+          <set href="container" attributeName="transform" to="rotate(270)" />
         </use>
-        <use href="#min_marker_one" fill="inherit">
-          <set href="container" attributeName="transform" to="rotate(24)" />
-        </use>
-      </g>
-    </symbol>
-
-    <symbol id="min_marker_quarter">
-      <g id="container">
-        <use href="#min_marker_penta" fill="inherit" />
-        <use href="#min_marker_penta" fill="inherit">
-          <set href="container" attributeName="transform" to="rotate(30)" />
-        </use>
-        <use href="#min_marker_penta" fill="inherit">
-          <set href="container" attributeName="transform" to="rotate(60)" />
-        </use>
-      </g>
-    </symbol>
-   
-    <symbol id="min_marker">
-      <use href="#min_marker_quarter" fill="inherit" />
-      <use href="#min_marker_quarter" fill="inherit">
-        <set href="container" attributeName="transform" to="rotate(90)" />
-      </use>
-      <use href="#min_marker_quarter" fill="inherit">
-        <set href="container" attributeName="transform" to="rotate(180)" />
-      </use>
-      <use href="#min_marker_quarter" fill="inherit">
-        <set href="container" attributeName="transform" to="rotate(270)" />
-      </use>
-    </symbol>
-
-    <!-- <symbol id="min_hand">
-      <line x1="0" y1="-21%" x2="0" y2="-50%+6" stroke-width="10" fill="black" />
-      <line x1="0" y1="-25%" x2="0" y2="-6%-6" stroke-width="10" fill="black" />
-
-      <line x1="0" y1="-3" x2="0" y2="-20%" stroke-width="1" fill="inherit" />
-
-      <line x1="0" y1="-21%" x2="0" y2="-50%+6" stroke-width="8" fill="inherit" />
-      <line x1="0" y1="-25%" x2="0" y2="-6%-6" stroke-width="8" fill="inherit" />
-    </symbol>
-
-    <symbol id="hour_hand">
-      <line x1="0" y1="-21%" x2="0" y2="-29%" stroke-width="14" fill="black" />
-      <line x1="0" y1="-25%" x2="0" y2="-6%-6" stroke-width="14" fill="black" />
-
-      <line x1="0" y1="-3" x2="0" y2="-20%" stroke-width="1" fill="inherit" />
-
-      <line x1="0" y1="-21%" x2="0" y2="-29%" stroke-width="12" fill="inherit" />
-      <line x1="0" y1="-25%" x2="0" y2="-6%-6" stroke-width="12" fill="inherit" />
-
-      <line x1="0" y1="-14%" x2="0" y2="-22%" stroke-width="8" fill="black" />
-      <line x1="0" y1="-18%" x2="0" y2="-10%" stroke-width="8" fill="black" />
-    </symbol> -->
-  </defs>
-  
-  <!-- end symbols -->
-  <svg id="face">
-    <g transform="translate(50%,50%)">
-      <use href="#hour_marker" fill="white" />
-      <use href="#min_marker" fill="#5a5a5a" />
-    </g>
-
-    <g id="batt_bars">
-      <line id="batt0" x1="-14" x2="14" stroke-width="2" fill="#333333" />
-      <line id="batt" x1="-14" x2="14" stroke-width="2" fill="#5682b4" class="color2" />
-    </g>
-
-    <image id="bklight" class="color2" x="50%-15" y="20%-15" width="31" height="31" href="bklight.png" fill="#5682b4" display="none" />
-
-    <g id="minutes" transform="translate(50%,50%)" fill="#6fa8e9" class="color1">
-      <use href="#min_hand" fill="inherit" />
-    </g>
-
-    <g id="hours" transform="translate(50%,50%)">
-      <use href="#hour_hand" fill="white" />
-    </g>
-
-    <g id="seconds" transform="translate(50%,50%)">
-      <use href="#sec_hand" fill="#ff0000" />
-      <!-- <line x1="0" y1="8%" x2="0" y2="-50%+3" stroke-width="1" class="color1" fill="#6fa8e9" /> -->
-    </g>
-
-    <text id="myweek" x="63%" fill="#bebebe" font-size="24"></text>
-    <text id="mydate" x="80%" fill="#bebebe" font-size="24"></text>
+      </symbol>
+      
+    </defs>
     
-    <svg id="statIconSvg">
-      <image id="statIcon" href="icon_steps.png"/> 
+    <!-- end symbols -->
+    <svg id="face">
+      <g transform="translate(50%,50%)">
+        <use href="#hour_marker" fill="white" />
+        <use href="#min_marker" fill="#5a5a5a" />
+      </g>
+
+      <g id="batt_bars">
+        <line id="batt0" x1="-14" x2="14" stroke-width="2" fill="#333333" />
+        <line id="batt" x1="-14" x2="14" stroke-width="2" fill="#5682b4" class="color2" />
+      </g>
+
+      <image id="bklight" class="color2" x="50%-15" y="20%-15" width="31" height="31" href="bklight.png" fill="#5682b4" display="none" />
+
+      <g id="minutes" transform="translate(50%,50%)" fill="#6fa8e9" class="color1">
+        <use href="#min_hand" fill="inherit" />
+      </g>
+
+      <g id="hours" transform="translate(50%,50%)">
+        <use href="#hour_hand" fill="white" />
+      </g>
+
+      <g id="seconds" transform="translate(50%,50%)">
+        <use href="#sec_hand" fill="#ff0000" />
+      </g>
+
+      <text id="myweek" x="63%" fill="#bebebe" font-size="24"></text>
+      <text id="mydate" x="80%" fill="#bebebe" font-size="24"></text>
+      
+      <svg id="statIconSvg">
+        <image id="statIcon" href="icon_steps.png"/> 
+      </svg>
+      <text id="mystats" fill="#e8eb2e" text-length="32"></text>
+
+      <circle cx="50%" cy="50%" r="4" fill="white" />
+      <circle cx="50%" cy="50%" r="2" fill="black" />
     </svg>
-    <text id="mystats" fill="#e8eb2e" text-length="32"></text>
 
-    <circle cx="50%" cy="50%" r="4" fill="white" />
-    <circle cx="50%" cy="50%" r="2" fill="black" />
-  </svg>
-
-  <svg id="icons">
-    <g class="color3 rings" fill="#32547a">
-      <!-- <image x="10" y="10" width="23" height="23" href="ico_cal.png" fill="inherit" /> -->
-
-
-      <!-- <image id="statIcon" href="steps_icon.png"/> -->
-      <!-- <image id="statIcon" href="batt_icon.png"/> -->
-
-
-      <!-- <image x="100%-32" y="100%-32" width="23" height="23" href="ico_dist.png" fill="inherit" /> -->
-      <!-- <image id="floors" x="10" y="100%-32" width="23" height="23" href="ico_climb.png" fill="inherit" /> -->
-    </g>
-
-    <!-- 
-    <g fill="#333333" class="rings">
-      <arc x="1" y="1" width="40" height="40" fill="inherit" arc-width="4" start-angle="0" sweep-angle="360" />
-      <arc x="100%-41" y="1" width="40" height="40" fill="inherit" arc-width="4" start-angle="0" sweep-angle="360" />
-      <arc x="100%-41" y="100%-41" width="40" height="40" fill="inherit" arc-width="4" start-angle="0" sweep-angle="360" />
-      <arc x="1" y="100%-41" width="40" height="40" fill="inherit" arc-width="4" start-angle="0" sweep-angle="360" />
-    </g>
-
-    <g class="color2 rings" fill="#5682b4">
-      <arc x="1"y="1" width="40" height="40" fill="inherit" arc-width="4" start-angle="0" sweep-angle="0" id="today_tl" />
-      <arc x="100%-41" y="1" width="40" height="40" fill="inherit" arc-width="4" start-angle="0" sweep-angle="0" id="today_tr" />
-      <arc x="100%-41" y="100%-41" width="40" height="40" fill="inherit" arc-width="4" start-angle="0" sweep-angle="0" id="today_br" />
-      <arc x="1" y="100%-41" width="40" height="40" fill="inherit" arc-width="4" start-angle="0" sweep-angle="0" id="today_bl" />
-    </g> 
-    -->
-
-    <rect id="top_half" width="30%" height="30%" x="35%" y="5%" fill="#ffffff" opacity="0" pointer-events="visible" />
-    <rect id="btm_half" width="90%" height="45%" x="5%" y="50%" fill="#ffffff" opacity="0" pointer-events="visible" />
-  </svg>  
+    <svg id="icons">
+      <rect id="top_half" width="30%" height="30%" x="35%" y="5%" fill="#ffffff" opacity="0" pointer-events="visible" />
+      <rect id="btm_half" width="90%" height="45%" x="5%" y="50%" fill="#ffffff" opacity="0" pointer-events="visible" />
+    </svg>  
 
   </use>
 </svg>

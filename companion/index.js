@@ -17,8 +17,7 @@ if(me.launchReasons.settingsChanged) sendAll();
 function sendAll() {
   let obj = {
     theme: trim(store.getItem("theme") || "blue"),
-    hideRings: (store.getItem("hideRings") === "true"),
-    unboldStats: (store.getItem("unboldStats") === "true"),
+    boldStats: (store.getItem("boldStats") === "false"),
     stats: ["steps", "heart"],
     firstStat: 0,
     days: getLocale()

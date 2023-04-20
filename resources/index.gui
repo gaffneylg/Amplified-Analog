@@ -1,4 +1,4 @@
-<svg viewport-fill="black">
+<svg viewport-fill="#a18e8e">
   <defs>
     <symbol id="hour_marker_one">
       <g id="container">
@@ -128,7 +128,6 @@
   </g>
 
   <g id="seconds" transform="translate(50%,50%)">
-    <!-- <line x1="0" y1="8%" x2="0" y2="-50%+3" stroke-width="1" class="color1" fill="#6fa8e9" /> -->
     <use href="#sec_hand" fill="red" />
   </g>
 
@@ -139,11 +138,8 @@
   <circle cx="50%" cy="50%" r="4" fill="white" />
   <circle cx="50%" cy="50%" r="2" fill="black" />
 
-  <g class="color3 rings" fill="#32547a">
-    <!-- <image x="10" y="10" width="23" height="23" href="ico_cal.png" fill="inherit" /> -->
+  <!-- <g class="color3 rings" fill="#32547a">
     <image x="100%-32" y="10" width="23" height="23" href="icon_steps.png" fill="inherit" />
-    <!-- <image x="100%-32" y="100%-32" width="23" height="23" href="ico_dist.png" fill="inherit" /> -->
-    <!-- <image id="floors" x="10" y="100%-32" width="23" height="23" href="ico_climb.png" fill="inherit" /> -->
   </g>
 
   <g fill="#333333" class="rings">
@@ -158,9 +154,9 @@
     <arc x="100%-41" y="1" width="40" height="40" fill="inherit" arc-width="4" start-angle="0" sweep-angle="0" id="today_tr" />
     <arc x="100%-41" y="100%-41" width="40" height="40" fill="inherit" arc-width="4" start-angle="0" sweep-angle="0" id="today_br" />
     <arc x="1" y="100%-41" width="40" height="40" fill="inherit" arc-width="4" start-angle="0" sweep-angle="0" id="today_bl" />
-  </g>
+  </g> 
 
   <rect id="top_half" width="30%" height="30%" x="35%" y="5%" fill="#ffffff" opacity="0" pointer-events="visible" />
-  <rect id="btm_half" width="90%" height="45%" x="5%" y="50%" fill="#ffffff" opacity="0" pointer-events="visible" />
+  <rect id="btm_half" width="90%" height="45%" x="5%" y="50%" fill="#ffffff" opacity="0" pointer-events="visible" /> -->
   
 </svg>

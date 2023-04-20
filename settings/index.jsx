@@ -4,10 +4,6 @@ function isNotEmpty(list) {
   return list && (list.length === 1 ? list[0].value !== "none" : list.length > 1);
 }
 
-//stats = {selected: [1, 0, 2], values[{name:"None",value:"none"},{name:"Steps",value:"steps"},{name:"Heart Rate (bpm)",value:"heart"}]}
-
-//firstStat = {"values":[{"name":"Steps","value":"steps"}],"selected":[1]}
-
 function getClampedFirstStat(props) {
   let first = props.settingsStorage.getItem("firstStat2");
   let stats = props.settingsStorage.getItem("stats");
@@ -22,11 +18,6 @@ registerSettingsPage(props => {
     {name: "Steps", value: "steps"},
     {name: "Heart Rate (bpm)", value: "heart"},
     {name: "Resting Heart Rate (- bpm -)", value: "rest"},
-    {name: "Distance (km/mi)", value: "dist"},
-    // {name: "Floors Climbed (f)", value: "floors"},
-    // {name: "Calories Burned (cal)", value: "cals"},
-    // {name: "Active Zone Minutes (hh'mm'')", value: "mins"},
-    // {name: "Weight (kg/lb)", value: "weight"},
     {name: "Digital Time", value: "time"},
     {name: "Battery", value: "batt"}
   ];
@@ -55,10 +46,6 @@ registerSettingsPage(props => {
         />      
       </Section>
 
-      <Section title="Health Rings">
-        <Toggle settingsKey="hideRings" label="Hide rings" />
-      </Section>  
-
       <Section title="Health Stats" description="Tap on bottom half of watch face to cycle through the stats.">
         <Select label="Show Stats"
           multiple
@@ -75,7 +62,7 @@ registerSettingsPage(props => {
             selected={getClampedFirstStat(props)}
           /> : null)}
        
-        <Toggle settingsKey="unboldStats" label="Narrow Font" />
+        <Toggle settingsKey="boldStats" label="Bold Font" />
       </Section>
     </Page>
   );

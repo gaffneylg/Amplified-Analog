@@ -52,8 +52,6 @@
   transform: translate(23%,0);
 }
 
-/* .application-fill           { fill: fb-cyan; } */
-.app-gradient-background    { fill: fb-cyan; } /* 8ecadc, 66db60, fb-cyan, */
-/* .foreground-fill            { fill: fb-white; } */
-/* .background-fill            { fill: fb-black; } */
-
+.app-gradient-background { 
+  fill: fb-cyan; /* 8ecadc, 66db60, fb-cyan, */
+} 
