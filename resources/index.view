@@ -2,20 +2,20 @@
   <use href="#app-gradient-background" class="app-gradient-background application-fill" apply-style="at-use">
 
     <symbol id="min_hand" pointer-events="visible" >
-      <line x1="0" y1="-16%" x2="0" y2="-46%+46" stroke-width="9" fill="black" />
-      <line x1="0" y1="-21%" x2="0" y2="-6%-6" stroke-width="9" fill="black" />
-      <line x1="0" y1="-2" x2="0" y2="-20%" stroke-width="1" fill="inherit" />
-      <line x1="0" y1="-16%" x2="0" y2="-46%+46" stroke-width="7" fill="inherit" />
-      <line x1="0" y1="-21%" x2="0" y2="-6%-6" stroke-width="7" fill="inherit" />
+      <line x1="0" y1="-16%" x2="0" y2="-48%+46" stroke-width="9" fill="black" stroke-linecap="round"/>
+      <line x1="0" y1="-21%" x2="0" y2="-6%-6" stroke-width="9" fill="black" stroke-linecap="round"/>
+      <line x1="0" y1="-2" x2="0" y2="-20%" stroke-width="1" fill="inherit" stroke-linecap="round"/>
+      <line x1="0" y1="-16%" x2="0" y2="-48%+46" stroke-width="7" fill="#93bfda" stroke-linecap="round"/>
+      <line x1="0" y1="-21%" x2="0" y2="-6%-6" stroke-width="7" fill="#93bfda" stroke-linecap="round"/>
     </symbol>
     <symbol id="hour_hand" pointer-events="visible">
-      <line x1="0" y1="-21%" x2="0" y2="-22%" stroke-width="13" fill="black" />
-      <line x1="0" y1="-25%" x2="0" y2="-6%-6" stroke-width="13" fill="black" />
-      <line x1="0" y1="-3" x2="0" y2="-20%" stroke-width="1" fill="inherit" />
-      <line x1="0" y1="-21%" x2="0" y2="-22%" stroke-width="11" fill="inherit" />
-      <line x1="0" y1="-25%" x2="0" y2="-6%-6" stroke-width="11" fill="inherit" />
-      <line x1="0" y1="-14%" x2="0" y2="-18%" stroke-width="7" fill="#5a5a5a" />
-      <line x1="0" y1="-18%" x2="0" y2="-10%" stroke-width="7" fill="#5a5a5a" />
+      <line x1="0" y1="-21%" x2="0" y2="-22%" stroke-width="13" fill="black" stroke-linecap="round"/>
+      <line x1="0" y1="-25%" x2="0" y2="-6%-6" stroke-width="13" fill="black" stroke-linecap="round"/>
+      <line x1="0" y1="-3" x2="0" y2="-20%" stroke-width="1" fill="inherit" stroke-linecap="round"/>
+      <line x1="0" y1="-21%" x2="0" y2="-22%" stroke-width="11" fill="inherit" stroke-linecap="round"/>
+      <line x1="0" y1="-25%" x2="0" y2="-6%-6" stroke-width="11" fill="inherit" stroke-linecap="round"/>
+      <line x1="0" y1="-14%" x2="0" y2="-18%" stroke-width="7" fill="#5a5a5a" stroke-linecap="round"/>
+      <line x1="0" y1="-18%" x2="0" y2="-10%" stroke-width="7" fill="#5a5a5a" stroke-linecap="round"/>
     </symbol>
     <symbol id="sec_hand" pointer-events="visible">
       <rect x="$-2" y="-130" width="3" height="120" fill="#ff0000" />
@@ -150,14 +150,14 @@
       <g id="seconds" transform="translate(50%,50%)">
         <use href="#sec_hand" fill="#ff0000" />
       </g>
-
-      <text id="myweek" x="63%" fill="#bebebe" font-size="24"></text>
-      <text id="mydate" x="80%" fill="#bebebe" font-size="24"></text>
+ 
+      <text id="myweek" x="63%" class="screenText"></text> <!-- e8eb2e, bebebe older colours -->
+      <text id="mydate" x="80%" class="screenText"></text>
       
       <svg id="statIconSvg">
         <image id="statIcon" href="icon_steps.png"/> 
       </svg>
-      <text id="mystats" fill="#e8eb2e" text-length="32"></text>
+      <text id="mystats" fill="#e8eb2e" text-length="32" font-family="System-Bold"></text>
 
       <circle cx="50%" cy="50%" r="4" fill="white" />
       <circle cx="50%" cy="50%" r="2" fill="black" />

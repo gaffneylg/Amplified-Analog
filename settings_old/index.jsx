@@ -14,11 +14,8 @@ function getClampedFirstStat(props) {
 
 registerSettingsPage(props => {
   let statsList = [
-    {name: "None", value: "none"},
     {name: "Steps", value: "steps"},
     {name: "Heart Rate (bpm)", value: "heart"},
-    {name: "Resting Heart Rate (- bpm -)", value: "rest"},
-    {name: "Digital Time", value: "time"},
     {name: "Battery", value: "batt"}
   ];
 

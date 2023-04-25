@@ -5,15 +5,15 @@
 console.log("App code started");
 
 import * as document from "document";
-import * as fs from "fs";
+// import * as fs from "fs";
 import * as health from "user-activity";
 import {battery} from "power";
 import {clock} from "clock";
 import {display} from "display";
 import {HeartRateSensor} from "heart-rate";
-import {peerSocket} from "messaging";
-import {inbox} from "file-transfer";
-import {vibration} from "haptics";
+// import {peerSocket} from "messaging";
+// import {inbox} from "file-transfer";
+// import {vibration} from "haptics";
 // import {decode} from "cbor";
 // import {me} from "appbit";
 // import {preferences, units} from "user-settings";
@@ -33,7 +33,7 @@ const THEMES = {
 };
 
 let lastUpdatedHeart = 0;
-let stats = ["none", "steps", "heart", "batt"]
+let stats = ["steps", "heart", "batt"]
 let curStat = 0;
 let heartSensor;
 let myDate = $("mydate");
@@ -99,10 +99,10 @@ function updateClock() {
 
   myBatt.x2 = Math.round(battery.chargeLevel * 7 / 25) - 14;
 
-  if (stats.length > 0 && stats[curStat] !== "none") {
+  if (stats.length > 0) {
     let nowTime = now.getTime();
 
-    if (stats.length > 0 && stats[curStat] !== "none" && !display.aodActive) {
+    if (stats.length > 0 && !display.aodActive) {
       if (stats[curStat] !== "heart") {
         updateStat();
       } else {
@@ -131,26 +131,37 @@ $("btm_half").onclick = () => {
 
 function updateStat() {
   let today = health.today.adjusted;
+  var statIconSvg = document.getElementById('statIconSvg');
+  var statIcon = statIconSvg.getElementById('statIcon');
   switch (stats[curStat]) {
     case "steps":
       myStats.text = today.steps;
-      let stepsIcon = "./resources/icon_steps.png";
-      var statIconSvg = document.getElementById('statIconSvg');
-      var statIcon = statIconSvg.getElementById('statIcon');
-      statIcon.href = stepsIcon;
+      
+      statIcon.href = "./resources/icon_steps.png";
       break;
     case "batt":
       myStats.text = battery.chargeLevel + "%";
       let battIcon = "./resources/icon_battery.png";
-      var statIconSvg = document.getElementById('statIconSvg');
-      var statIcon = statIconSvg.getElementById('statIcon');
+      // var statIconSvg = document.getElementById('statIconSvg');
+      // var statIcon = statIconSvg.getElementById('statIcon');
       statIcon.href = battIcon;
       break;
     default:
       myStats.text = "";
-      statIcon.display.style = "none"
+      // var statIconSvg = document.getElementById('statIconSvg');
+      // var statIcon = statIconSvg.getElementById('statIcon');
+      statIcon.href = "";
+      break;
   }
 }
+
+// function steps() {
+//   let today = health.today.adjusted;
+//   myStats.text = today.steps;
+//   var statIconSvg = document.getElementById('statIconSvg');
+//   var statIcon = statIconSvg.getElementById('statIcon');
+//   statIcon.href = "./resources/icon_steps.png";
+// }
 
 var delayHeart;
 
@@ -183,48 +194,48 @@ function updateHeart() {
   }
 }
 
-function applySettings(o) {
-  if (o.theme) {
-    let colors = THEMES[o.theme] || [];
-    for (let i = 0; i < colors.length; i++) {
-      let nodes = document.getElementsByClassName("color" + (i + 1));
-      let node, j = 0;
-      while (node = nodes[j++]) node.style.fill = "#" + colors[i];
-    }
-  }
-  if (o.days) {
-    weekNames = o.days;
-  }
-  if ("stats" in o) 
-    stats = o.stats;
-    myStats.text = "";
-    lastUpdatedHeart = 0;
-}
+// function applySettings(o) {
+//   if (o.theme) {
+//     let colors = THEMES[o.theme] || [];
+//     for (let i = 0; i < colors.length; i++) {
+//       let nodes = document.getElementsByClassName("color" + (i + 1));
+//       let node, j = 0;
+//       while (node = nodes[j++]) node.style.fill = "#" + colors[i];
+//     }
+//   }
+//   if (o.days) {
+//     weekNames = o.days;
+//   }
+//   if ("stats" in o) 
+//     stats = o.stats;
+//     myStats.text = "";
+//     lastUpdatedHeart = 0;
+// }
 
-function parseFile(name) {
-  let obj;
-  try {
-    obj = fs.readFileSync(name, "cbor");
-  } catch (e) {
-    return true;
-  }
+// function parseFile(name) {
+//   let obj;
+//   try {
+//     obj = fs.readFileSync(name, "cbor");
+//   } catch (e) {
+//     return true;
+//   }
 
-  if (name === "settings2.txt") {
-    if (obj) applySettings(obj);
-  }
-}
+//   if (name === "settings2.txt") {
+//     if (obj) applySettings(obj);
+//   }
+// }
 
-if (parseFile("settings2.txt")) {
-  let done = (peerSocket.readyState === peerSocket.OPEN);
-  if (done) {
-    peerSocket.send({ getAll: 1 });
-  } else {
-    peerSocket.onopen = () => {
-      if (!done) peerSocket.send({ getAll: 1 });
-      done = true;
-    };
-  }
-}
+// if (parseFile("settings2.txt")) {
+//   let done = (peerSocket.readyState === peerSocket.OPEN);
+//   if (done) {
+//     peerSocket.send({ getAll: 1 });
+//   } else {
+//     peerSocket.onopen = () => {
+//       if (!done) peerSocket.send({ getAll: 1 });
+//       done = true;
+//     };
+//   }
+// }
 
 // if(display.aodAvailable && me.permissions.granted("access_aod")) {
 //   display.aodAllowed = true;

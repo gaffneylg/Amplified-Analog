@@ -87,8 +87,8 @@
 
       <line x1="0" y1="-3" x2="0" y2="-20%" stroke-width="1" fill="inherit" />
 
-      <line x1="0" y1="-25%" x2="0" y2="-50%+6" stroke-width="8" fill="inherit" />
-      <line x1="0" y1="-25%" x2="0" y2="-6%-6" stroke-width="8" fill="inherit" />
+      <line x1="0" y1="-25%" x2="0" y2="-50%+6" stroke-width="8" fill="#93bfda" />
+      <line x1="0" y1="-25%" x2="0" y2="-6%-6" stroke-width="8" fill="#93bfda" />
     </symbol>
 
     <symbol id="hour_hand">
@@ -131,9 +131,9 @@
     <use href="#sec_hand" fill="red" />
   </g>
 
-  <text id="mydate" fill="white"></text>
-  <text id="myweek" fill="#dddddd"></text>
-  <text id="mystats" x="50%" fill="#5682b4" class="color2"></text>
+  <!-- <text id="mydate" fill="white"></text>
+  <text id="myweek" fill="#dddddd"></text> -->
+  <!-- <text id="mystats" x="50%" fill="#5682b4" class="color2"></text> -->
   
   <circle cx="50%" cy="50%" r="4" fill="white" />
   <circle cx="50%" cy="50%" r="2" fill="black" />
