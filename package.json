@@ -1,5 +1,5 @@
 {
-  "name": "amped-up-analog",
+  "name": "amplified-analog",
   "version": "0.1.0",
   "private": true,
   "license": "UNLICENSED",
@@ -10,7 +10,7 @@
   "fitbit": {
     "appUUID": "eb8e6fba-b6c6-46c4-b188-12fdb365287e",
     "appType": "clockface",
-    "appDisplayName": "Amped Up Analog",
+    "appDisplayName": "Amplified Analog",
     "iconFile": "resources/icon.png",
     "wipeColor": "#ffffff",
     "requestedPermissions": [

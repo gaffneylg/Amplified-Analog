@@ -57,7 +57,7 @@
           <set href="container" attributeName="transform" to="rotate(90)" />
         </use>
         <!-- Roman numerals  -->
-        <text id="six" x="-5%+1" y="49%+2" fill="inherit" font-size="32" fill="#d1c77c">VI</text>
+        <text id="six" x="-4%" y="49%+2" fill="inherit" font-size="32" fill="#d1c77c">VI</text>
         <!-- Arabic numbers -->
         <!-- <text id="six" x="-3%+1" y="49%" fill="inherit" font-size="32" fill="#d1c77c">6</text> -->
 
@@ -151,7 +151,7 @@
         <use href="#sec_hand" fill="#ff0000" />
       </g>
  
-      <text id="myweek" x="63%" class="screenText"></text> <!-- e8eb2e, bebebe older colours -->
+      <text id="myweek" x="63%" class="screenText"></text>
       <text id="mydate" x="80%" class="screenText"></text>
       
       <svg id="statIconSvg">
