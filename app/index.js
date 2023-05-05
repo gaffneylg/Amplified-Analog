@@ -24,7 +24,7 @@ let twelve = $("twelve");
 let three = $("three");
 let six = $("six");
 let nine = $("nine");
-let weekNames = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+let weekNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 function $(s) {
   return document.getElementById(s);
