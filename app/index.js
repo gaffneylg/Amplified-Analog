@@ -135,12 +135,12 @@ var delayHeart;
 
 function updateHeart() {
   let h = heartSensor;
-  let heartIcon = "./resources/icon_heart.png";
-  var statIconSvg = document.getElementById('statIconSvg');
-  var statIcon = statIconSvg.getElementById('statIcon');
-  statIcon.href = heartIcon;
 
   if (!h) {
+    let heartIcon = "./resources/icon_heart.png";
+    var statIconSvg = document.getElementById('statIconSvg');
+    var statIcon = statIconSvg.getElementById('statIcon');
+    statIcon.href = heartIcon;
     heartSensor = h = new HeartRateSensor();
     h.onreading = () => {
       setTimeout(() => h.stop(), 100);
@@ -154,6 +154,10 @@ function updateHeart() {
     };
   }
   if (!h.activated) {
+    let heartIcon = "./resources/icon_heart.png";
+    var statIconSvg = document.getElementById('statIconSvg');
+    var statIcon = statIconSvg.getElementById('statIcon');
+    statIcon.href = heartIcon;
     clearTimeout(delayHeart);
     delayHeart = setTimeout(() => {
       myStats.text = "--";
